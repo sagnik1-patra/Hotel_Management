@@ -1,0 +1,99 @@
+.booking-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 1rem;
+}
+
+.booking-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.booking-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.booking-info h2 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.legend {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.table-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.table-box.available {
+  background-color: rgba(99, 102, 241, 0.1);
+  border: 1px solid var(--primary-color);
+}
+
+.table-box.occupied {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--error-color);
+}
+
+.tables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1.5rem;
+}
+
+.table-card {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.table-card.available {
+  background-color: rgba(30, 41, 59, 0.6);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.table-card.available:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
+  background-color: rgba(99, 102, 241, 0.1);
+  box-shadow: 0 8px 16px rgba(99, 102, 241, 0.2);
+}
+
+.table-card.occupied {
+  background-color: rgba(239, 68, 68, 0.05);
+  border: 2px solid rgba(239, 68, 68, 0.3);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}
