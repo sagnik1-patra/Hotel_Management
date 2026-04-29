@@ -172,16 +172,17 @@ const FoodOrdering = () => {
             </div>
           </div>
           
+          <div className="search-bar">
+            <Search size={18} color="var(--text-secondary)" />
+            <input 
+              type="text" 
+              placeholder="Search menu..." 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+
           <div className="nav-actions">
-            <div className="search-bar">
-              <Search size={18} color="var(--text-secondary)" />
-              <input 
-                type="text" 
-                placeholder="Search menu..." 
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-            </div>
             <button className="cart-btn" onClick={() => setIsCartOpen(true)}>
               <ShoppingBag size={24} />
               {cartCount > 0 && <span className="badge">{cartCount}</span>}
