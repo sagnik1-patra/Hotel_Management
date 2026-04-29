@@ -97,3 +97,42 @@
   color: var(--text-secondary);
   cursor: not-allowed;
 }
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .booking-header {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .booking-main {
+    padding: 1rem;
+  }
+  
+  .booking-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .tables-grid {
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 1rem;
+  }
+  
+  .table-card {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .legend {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+  
+  .legend-item {
+    font-size: 0.8rem;
+  }
+}

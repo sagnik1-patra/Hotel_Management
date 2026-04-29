@@ -140,3 +140,24 @@ input, textarea {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-secondary);
 }
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .glass-panel {
+    border-radius: 12px;
+  }
+  
+  .btn-primary {
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}

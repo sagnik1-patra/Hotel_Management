@@ -524,3 +524,86 @@
 .success-content p {
   color: var(--text-secondary);
 }
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .top-nav {
+    flex-direction: column-reverse;
+    padding: 1rem;
+    gap: 1.5rem;
+    position: static;
+  }
+  
+  .user-info {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .nav-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .search-bar {
+    flex: 1;
+  }
+  
+  .search-bar input {
+    width: 100%;
+  }
+  
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-tabs {
+    margin-bottom: 1rem;
+  }
+  
+  .menu-card {
+    flex-direction: row;
+    height: 140px;
+  }
+  
+  .card-image {
+    width: 120px;
+    height: 100%;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-header h3 {
+    font-size: 0.95rem;
+  }
+  
+  .price {
+    font-size: 0.95rem;
+  }
+  
+  .add-to-cart-btn {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+  }
+  
+  .checkout-modal {
+    padding: 1.5rem;
+    margin: 1rem;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}
